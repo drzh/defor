@@ -1,4 +1,4 @@
-# DEFOR - Depth and Frequency Based Copy Number Detector
+# DEFOR - Depth and Frequency Based Copy Number Alternation Detector
 
 
 ## Table of content
