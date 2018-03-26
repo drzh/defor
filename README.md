@@ -12,7 +12,7 @@
 
 ## Introduction
 
-DEFOR is a set of programs to identify copy number alternations from tumor/normal pair samples.
+DEFOR is a set of programs to identify copy number alternations from tumor/normal pair samples. In this method, both read depth and allele frequency were considered, and it doesn’t rely on the assumption that there are no large-scale CNAs in tumor cells. In the evaluation using a published dataset, DEFOR has better accuracy than the other methods especially in the situation where there are large-scale CNAs in the tumor genome.
 
 
 ## Installing
