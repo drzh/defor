@@ -28,7 +28,7 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 * Compile the source code
 
     ````
-    cd defor-xxx/
+    cd defor/
     make
     ```
 
