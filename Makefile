@@ -1,7 +1,7 @@
 all:
 	cd lib/gsl-2.4/ &&\
 	mkdir installdir &&\
-	./configure --prefix=${CURDIR}/installdir &&\
+	./configure --prefix=${CURDIR}/lib/gsl-2.4/installdir &&\
 	make && make install
 	cd src && \
 	gcc -Wall -I ../lib/gsl-2.4/installdir/include/ -c calc_deprat.c && \
