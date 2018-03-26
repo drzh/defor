@@ -10,3 +10,4 @@ all:
 	gcc -L ../lib/gsl-2.4/installdir/lib/ -static calc_nclust.o -lgsl -lgslcblas -lm -o calc_nclust && \
 	mkdir ../bin && \
 	cp calc_deprat calc_nclust ../bin
+	cp script/extract_nclust.pl script/calc_cna.pl bin/
