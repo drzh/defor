@@ -3,7 +3,6 @@
 
 ## Table of content
 * [Introduction](#introduction)
-* [Download](#download)
 * [Installing](#installing)
 * [Tutorial](#tutorial)
 * [Input files](#input-files)
@@ -20,6 +19,11 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 * Prerequisites
 
     [samtools](http://www.htslib.org/) was required if the bam files were used as input.
+    
+* Download
+    ````
+    git clone https://github.com/drzh/defor.git
+    ````
 
 * Compile the source code
 
