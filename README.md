@@ -100,7 +100,7 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
          Options:
            -w : window size [1000000]
            -s : step size [1000]
-           -d : maximum allele frequency [0.95]
+           -d : minimal depth [10]
            -n : maximum iteration [10]
 
 #### calc_freq.pl  --  Calculate the allele frequency
