@@ -92,6 +92,7 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
     Bam or sam files can also be used as input files. samtools was required for converting the bam or sam files
 
 ## Output file
+
 The final output file from the whole pipeline is composed of six columns:
 
     ````
