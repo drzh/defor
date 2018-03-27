@@ -282,7 +282,7 @@ Usage: %s [options] file_normal file_tumor            \n\n\
          Options:                                    \n\
            -w : window size [1000000]                \n\
            -s : step size [1000]      \n\
-           -d : maximum allele frequency [0.95]      \n\
+           -d : minimal depth [10]      \n\
            -n : maximum iteration [10]\n             \n\
 ", prog);
   exit(1);
