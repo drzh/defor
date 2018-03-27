@@ -160,6 +160,16 @@ The meaning of each column:
            -M : higher cutoff of mean frequency for the middle cluster [0.6]
            -v : verbose level [0]
 
+#### calc_cna.pl  -- Estimate the copy numbers 
+
+    Usage: calc_cna.pl [options] -r normal_tumor.dep -c normal_tumor.nclust.seg > normal_tumor.cna
+    
+         Options:
+           -D : minimum allele frequency difference to distinguish two clusters [0.15]
+           -m : lower cutoff of mean frequency for the middle cluster [0.45]
+           -M : higher cutoff of mean frequency for the middle cluster [0.6]
+           -v : verbose level [0]
+           
 ## Authors
 
 * He Zhang (he.zhang@utsouthwestern.edu)
