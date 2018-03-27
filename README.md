@@ -93,7 +93,7 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 
 ## Output file
 
-The final output file from the whole pipeline is composed of six columns:
+The final output file from the whole pipeline is composed of six columns. Here is an example:
 
     2       212989532       243175930       loh       1       -0.44
     3       6521842         94773340        loh       1       -0.45
@@ -103,6 +103,19 @@ The final output file from the whole pipeline is composed of six columns:
     4       176649734       191024530       normal    2       0.04
     5       5038810         180903064       amp       3       0.38
     6       304501          58779245        normal    2       -0.00
+
+The meaning of each column:
+* The 1st column: chromosome
+* The 2nd column: start position (1-based)
+* The 3rd column: end position (1-based)
+* The 4th column: copy number event occured in this region
+    * normal - normal status, copy number is two, no CNA
+    * loss - loss of both alleles, copy number is zero
+    * loh - loss of heterozygosity, loss of one allele, copy number is one
+    * amp - amplification of one or both alleles, copy nubmber is greater than two
+    * loh-amp - loss of heterozygosity followed by amplification, copy number is two
+* The 5th column: the expected copy number if the purity of tumor is 100%
+* The 6th column: the observed copy number, the value was normalized as log(copy number / 2)
 
 ## Programs and scripts
 
