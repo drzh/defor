@@ -91,6 +91,20 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 
     Bam or sam files can also be used as input files. samtools was required for converting the bam or sam files
 
+## Output file
+The final output file from the whole pipeline is composed of six columns:
+
+    ````
+    2       212989532       243175930       loh     1       -0.44
+    3       6521842 94773340        loh     1       -0.45
+    3       94773341        96718082        loss    0       -0.64
+    3       96718083        197947755       normal  2       -0.00
+    4       143643221       171526951       loh-amp 2       -0.01
+    4       176649734       191024530       normal  2       0.04
+    5       5038810 180903064       amp     3       0.38
+    6       304501  58779245        normal  2       -0.00
+    ````
+
 ## Programs and scripts
 
 #### calc_deprat  --  Calculate the depth ratio between tumor and normal
