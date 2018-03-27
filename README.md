@@ -57,15 +57,14 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 3. Estimate depth ratio for tumor/normal pair
 
     ````
-    ../bin/calc_deprat <(samtools mpileup -q 10 -f hs37d5.fa test_normal.bam) <(samtools mpileup -q 10 -f hs37d5.fa test_tumor.bam) > test_normal_tumor.dep
+    ../bin/calc_deprat -d 10 -w 1000000 -s 1000 test_normal.mpileup test_tumor.mpileup > test_normal_tumor.dep
     ````
-
 
 4. Calculate the allele frequency for both tumor and normal samples
 
     ````
-    samtools mpileup -q 10 -f hs37d5.fa test_normal.bam | ../bin/calc_freq.pl -d 30 -f 0.01 -F 0.99 > test_normal.freq
-    samtools mpileup -q 10 -f hs37d5.fa test_tumor.bam | ../bin/calc_freq.pl -d 30 -f 0.01 -F 0.99 > test_tumor.freq
+    cat test_normal.mpileup | ~/script/package/cna/script/calc_freq.pl -d 30 -f 0.01 -F 0.99 > test_normal.freq
+    cat test_tumor.mpileup | ~/script/package/cna/script/calc_freq.pl -d 30 -f 0.01 -F 0.99 > test_tumor.freq 
     ````
 
 5. Estimate allele frequency clusters
