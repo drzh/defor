@@ -30,7 +30,7 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
     ````
     cd defor
     make
-    
+
 * (Optional) Copy the programs under 'bin' to any folder you like
 
     ```
