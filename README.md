@@ -87,10 +87,12 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
             ````
             samtools mpileup -q 10 -d 200 -f hs37d5.fa test_normal.bam > test_normal.mpileup
             ````
-        2.  Pipe the output from samtools to DEFOR programs. Here is an example:
+            
+        2. Pipe the output from samtools to DEFOR programs. Here is an example:
             ````
             ../bin/calc_deprat <(samtools mpileup -q 10 -f hs37d5.fa test_normal.bam) <(samtools mpileup -q 10 -f hs37d5.fa test_tumor.bam) > test_normal_tumor.dep
             ````
+            
     
 ## Output file
 
