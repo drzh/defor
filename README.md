@@ -42,37 +42,37 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 
 1. Download the test dataset and decompress it
 
-    ````
+    ```
     wget https://cloud.biohpc.swmed.edu/index.php/s/NguCFR0bPP6T198/download
     tar zxf test.tar.gz
     cd test
-    ````
+    ```
 
 3. Estimate depth ratio for tumor/normal pair
 
-    ````
+    ```
     ../bin/calc_deprat test_normal.mpileup test_tumor.mpileup > test_normal_tumor.dep
-    ````
+    ```
 
 4. Calculate the allele frequency for both tumor and normal samples
 
-    ````
+    ```
     cat test_normal.mpileup | ~/script/package/cna/script/calc_freq.pl -d 30 -f 0.01 -F 0.99 > test_normal.freq
     cat test_tumor.mpileup | ~/script/package/cna/script/calc_freq.pl -d 30 -f 0.01 -F 0.99 > test_tumor.freq 
-    ````
+    ```
 
 5. Estimate allele frequency clusters
 
-    ````
+    ```
     ../bin/calc_nclust test_normal.freq test_tumor.freq > test_normal_tumor.nclust
     cat test_normal_tumor.nclust | ../script/extract_nclust.pl > test_normal_tumor.nclust.seg
-    ````
+    ```
     
 6. Estimate the copy number alterations
 
-    ````
+    ```
     ../bin/calc_cna.pl -r test_normal_tumor.dep -c test_normal_tumor.nclust.seg > test_normal_tumor.cna
-    ````
+    ```
 
 ## Input files
 
@@ -85,14 +85,14 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
     To use bam or sam files as input, you have two options:
         1. Convert the bam or sam files to mpileup files using samtools, and then use the mpileup file as input. Here is an example:
             
-            ````
+            ```bash
             samtools mpileup -q 10 -d 200 -f hs37d5.fa test_normal.bam > test_normal.mpileup
-            ````
+            ```
             
         2. Pipe the output from samtools to DEFOR programs. Here is an example:
-            ````
+            ```bash
             ../bin/calc_deprat <(samtools mpileup -q 10 -f hs37d5.fa test_normal.bam) <(samtools mpileup -q 10 -f hs37d5.fa test_tumor.bam) > test_normal_tumor.dep
-            ````
+            ```
             
     
 ## Output file
