@@ -40,20 +40,14 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 
 ## Tutorial
 
-1. Change to the testing directory
+1. Download the test dataset and decompress it
 
     ````
+    wget https://cloud.biohpc.swmed.edu/index.php/s/NguCFR0bPP6T198/download
+    tar zxf test.tar.gz
     cd test
     ````
 
-2. Download genome reference file and bam files
-
-    ````
-    wget hs37d5.fa
-    wget test_normal.bam
-    wget test_tumor.bam
-    ````
-    
 3. Estimate depth ratio for tumor/normal pair
 
     ````
