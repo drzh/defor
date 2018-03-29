@@ -16,10 +16,6 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 
 ## Installing
 
-* Prerequisites
-
-    [samtools](http://www.htslib.org/) was required if the bam files were used as input.
-    
 * Download
     ```
     git clone https://github.com/drzh/defor.git
@@ -78,19 +74,19 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 
 1. mpileup format
 
-  DEFOR can take the mpileup files as input directly
+   DEFOR can take the mpileup files as input directly
 
 2. bam or sam files
 
-  To use bam or sam files as input, you have two options:
+   To use bam or sam files as input, you have two options:
  
-  1. Convert the bam or sam files to mpileup files using samtools, and then use the mpileup file as input. Here is an example:
+   1. Convert the bam or sam files to mpileup files using samtools, and then use the mpileup file as input. Here is an example:
            
     ```
     samtools mpileup -q 10 -d 200 -f hs37d5.fa test_normal.bam > test_normal.mpileup
     ```
             
-  2. Pipe the output from samtools to DEFOR programs. Here is an example:
+   2. Pipe the output from samtools to DEFOR programs. Here is an example:
     ```bash
     ../bin/calc_deprat <(samtools mpileup -q 10 -f hs37d5.fa test_normal.bam) <(samtools mpileup -q 10 -f hs37d5.fa test_tumor.bam) > test_normal_tumor.dep
     ```
