@@ -86,7 +86,7 @@ To use bam or sam files as input, you have two options:
  
 ..1. Convert the bam or sam files to mpileup files using samtools, and then use the mpileup file as input. Here is an example:
            
-    ```bash
+    ...```
     samtools mpileup -q 10 -d 200 -f hs37d5.fa test_normal.bam > test_normal.mpileup
     ```
             
