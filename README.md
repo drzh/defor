@@ -51,7 +51,7 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 3. Estimate depth ratio for tumor/normal pair
 
     ````
-    ../bin/calc_deprat -d 10 -w 1000000 -s 1000 test_normal.mpileup test_tumor.mpileup > test_normal_tumor.dep
+    ../bin/calc_deprat test_normal.mpileup test_tumor.mpileup > test_normal_tumor.dep
     ````
 
 4. Calculate the allele frequency for both tumor and normal samples
@@ -78,12 +78,20 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 
 1. mpileup format
 
-    DEFOR can take the input from mpileup files directly
+    DEFOR can take the mpileup files as input directly
 
 2. bam or sam files
 
-    Bam or sam files can also be used as input files. samtools was required for converting the bam or sam files
-
+    To use bam or sam files as input, you have two options:
+        1. Convert the bam or sam files to mpileup files using samtools, and then use the mpileup file as input. Here is an example:
+            ````
+            samtools mpileup -q 10 -d 200 -f hs37d5.fa test_normal.bam > test_normal.mpileup
+            ````
+        2.  Pipe the output from samtools to DEFOR programs. Here is an example:
+            ````
+            ../bin/calc_deprat <(samtools mpileup -q 10 -f hs37d5.fa test_normal.bam) <(samtools mpileup -q 10 -f hs37d5.fa test_tumor.bam) > test_normal_tumor.dep
+            ````
+    
 ## Output file
 
 The final output file from the whole pipeline is composed of six columns. Here is an example:
