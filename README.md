@@ -171,7 +171,7 @@ The meaning of each column:
            -M : higher cutoff of mean frequency for the middle cluster [0.6]
            -v : verbose level [0]
            
-## Authors
+## Author
 
 * He Zhang (he.zhang@utsouthwestern.edu)
 
