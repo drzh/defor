@@ -39,7 +39,7 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 1. Download the test dataset and decompress it
 
     ```
-    wget https://cloud.biohpc.swmed.edu/index.php/s/NguCFR0bPP6T198/download
+    wget https://cloud.biohpc.swmed.edu/index.php/s/NguCFR0bPP6T198/download -O test.tar.gz
     tar zxf test.tar.gz
     cd test
     ```
