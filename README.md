@@ -67,7 +67,7 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 6. Estimate the copy number alterations
 
     ```
-    ../bin/calc_cna.pl -r test_normal_tumor.dep -c test_normal_tumor.nclust.seg > test_normal_tumor.cna
+    ../script/calc_cna.pl -r test_normal_tumor.dep -c test_normal_tumor.nclust.seg > test_normal_tumor.cna
     ```
 
 ## Input files
