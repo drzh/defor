@@ -9,9 +9,9 @@ use warnings;
 use Getopt::Long;
 
 my $file = '/dev/stdin';
-my $para_dmin = 0;
-my $para_fmin = 0;
-my $para_fmax = 1;
+my $para_dmin = 30;
+my $para_fmin = 0.01;
+my $para_fmax = 0.99;
 my $para_start = 3;
 my $para_k = 0;
 my $para_t = 0;
