@@ -153,7 +153,6 @@ The meaning of each column:
     Usage: extract_nclust.pl [options] -i normal_tumor.nclust > test_normal_tumor.nclust.seg
     
          Options:
-           -w : window size [1000000]
            -d : minimum allele frequency difference to distinguish two clusters [0.1]
            -f : low allele frequency cutoff [0.1]
            -F : high allele frequency cutoff [0.9]
