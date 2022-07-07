@@ -74,10 +74,10 @@ DEFOR is a set of programs to identify copy number alternations from tumor/norma
 
 1. mpileup format
 
-    DEFOR can take the mpileup files as input directly
+    DEFOR can take the sorted mpileup files as input directly. The mpileup file should be sorted according to the coordinates.
 
 2. bam or sam files
-    To use bam or sam files as input, you have two options:
+    To use the sorted bam or sam files as input, you have two options:
     1. Convert the bam or sam files to mpileup files using samtools, and then use the mpileup file as input. Here is an example:
            
         ```
@@ -153,7 +153,6 @@ The meaning of each column:
     Usage: extract_nclust.pl [options] -i normal_tumor.nclust > test_normal_tumor.nclust.seg
     
          Options:
-           -w : window size [1000000]
            -d : minimum allele frequency difference to distinguish two clusters [0.1]
            -f : low allele frequency cutoff [0.1]
            -F : high allele frequency cutoff [0.9]
