@@ -328,12 +328,14 @@ sub median {
 
 sub output {
   my $ref = $_[0];
-  my $cn = '.';
-  if ($ref -> [5] <= $para_cncutoff) {
-    $cn = 2;
+  if (defined($ref -> [0])) {
+    my $cn = '.';
+    if ($ref -> [5] <= $para_cncutoff) {
+      $cn = 2;
+    }
+    elsif ($ref -> [5] > $para_cncutoff) {
+      $cn = 1;
+    }
+    print join("\t", $ref -> [0], $ref -> [7], $ref -> [8], $cn, sprintf("%.3f", $ref -> [5])), "\n";
   }
-  elsif ($ref -> [5] > $para_cncutoff) {
-    $cn = 1;
-  }
-  print join("\t", $ref -> [0], $ref -> [7], $ref -> [8], $cn, sprintf("%.3f", $ref -> [5])), "\n";
 }

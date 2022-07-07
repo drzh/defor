@@ -845,6 +845,7 @@ sub cpn2stat {
     my $len = 0;
     my $end = 0;
     my @lgrs;
+    next if (! (exists $ratchridxstart{$chr} && $ratchridxend{$chr}));
     foreach my $r (@rat[$ratchridxstart{$chr} .. $ratchridxend{$chr}]) {
       my @e = @{$r};
       if ($e[7] eq '2') {
